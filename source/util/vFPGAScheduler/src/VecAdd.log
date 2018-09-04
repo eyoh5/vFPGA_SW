@@ -1,0 +1,15 @@
+IDX            getHardware    getProgram     latency
+       0              0.000131       0.546165       0.546846       
+
+===========================================================Total 1 are requested
+Average Latency : 0.546846
+IDX            getHardware    getProgram     latency
+       0              0.000176       0.588169       0.588874       
+
+===========================================================Total 1 are requested
+Average Latency : 0.588874
+IDX            getHardware    getProgram     latency
+       0              0.000164       0.884237       0.884825       
+
+===========================================================Total 1 are requested
+Average Latency : 0.884825
