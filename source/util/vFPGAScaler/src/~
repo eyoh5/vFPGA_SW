@@ -1,0 +1,9 @@
+#include "mmdapp.h"
+
+MMDApp::MMDApp(ServiceRegistry& srv_reg, ResourceRegistry& rsc_reg, char* name, int service_id) : srv_reg(srv_reg), rsc_reg(rsc_reg), name(name), service_id(service_id){
+
+}
+
+MMDApp::~MMDApp(){
+
+}
