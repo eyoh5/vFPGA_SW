@@ -1,0 +1,2332 @@
+:: [GLOBAL-MEM] Init: Bar 4, Total offset 0x10000, diff_endian is 0 
+:: [PCIE-CRA] Init: Bar 4, Total offset 0x0, diff_endian is 0 
+:: [MEMWINDOW] Init: Bar 4, Total offset 0xc870, diff_endian is 0 
+:: [DMA-CTR] Init: Bar 0, Total offset 0x0, diff_endian is 0 
+:: [VERSION] Init: Bar 4, Total offset 0xcfc0, diff_endian is 0 
+:: [PRBASEID] Init: Bar 4, Total offset 0xcf80, diff_endian is 0 
+:: [QUARTUS-VERSION] Init: Bar 4, Total offset 0xd000, diff_endian is 0 
+:: [HOSTCH-VERSION] Init: Bar 4, Total offset 0xd100, diff_endian is 0 
+:: [CADEID] Init: Bar 4, Total offset 0xcf70, diff_endian is 0 
+:: [UNIPHYSTATUS] Init: Bar 4, Total offset 0xcfe0, diff_endian is 0 
+:: [UNIPHYRESET] Init: Bar 4, Total offset 0xcfd0, diff_endian is 0 
+:: [KERNEL_0] Init: Bar 4, Total offset 0x4000, diff_endian is 0 
+:: [KERNEL_1] Init: Bar 4, Total offset 0x20000, diff_endian is 0 
+:: [KERNEL_2] Init: Bar 4, Total offset 0x24000, diff_endian is 0 
+:: [KERNEL_3] Init: Bar 4, Total offset 0x28000, diff_endian is 0 
+:: [PLL] Init: Bar 4, Total offset 0xb000, diff_endian is 0 
+:: [TEMP-SENSOR] Init: Bar 4, Total offset 0xcff0, diff_endian is 0 
+:: [acla10_vfpga0] Doing PCIe-to-fabric read test ...
+:: [acla10_vfpga0] PCIe-to-fabric read test passed
+:: [acla10_vfpga0] Uniphys are calibrated
+:: [acla10_vfpga0] Enabling PCIe interrupts on Linux (via signals).
+:: [acla10_vfpga0] successfully initialized (device id: 2494).
+::           Using DMA for big transfers? yes
+Status done
+queue done
+scaler done
+acla10_vfpga0 Device =============
+dev_name : acla10_vfpga0 
+board_name : Arria 10 vFPGA Platform (acla10_vfpga0) 
+id : 0 
+dev_handle : 1
+num_prrs : 4
+Partition 0 ===========
+id : 0 
+allocated_to : -1
+programmed_with : -1
+status : 0
+========================
+Partition 1 ===========
+id : 1 
+allocated_to : -1
+programmed_with : -1
+status : 0
+========================
+Partition 2 ===========
+id : 2 
+allocated_to : -1
+programmed_with : -1
+status : 0
+========================
+Partition 3 ===========
+id : 3 
+allocated_to : -1
+programmed_with : -1
+status : 0
+========================
+===========================================================
+ServiceRegistry>> Register Service MatMul with 4 bins ...
+ServiceRegistry>> [MatMul] registered successfully, service ID 0 will be returned
+ServiceRegistry>> Register Service Sobel with 4 bins ...
+ServiceRegistry>> [Sobel] registered successfully, service ID 1 will be returned
+ServiceRegistry>> Register Service VecAdd with 4 bins ...
+ServiceRegistry>> [VecAdd] registered successfully, service ID 2 will be returned
+VecAdd Service==============
+ID: 2
+4 Bin Files [dev_name, part_id, filename]....
+[acla10_vfpga0, 0, ../bin/pr_bin/VecAdd/fpga.bin]
+[acla10_vfpga0, 1, ../bin/pr_bin/VecAdd/fpga_1.bin]
+[acla10_vfpga0, 2, ../bin/pr_bin/VecAdd/fpga_2.bin]
+[acla10_vfpga0, 3, ../bin/pr_bin/VecAdd/fpga_3.bin]
+1 Allocated instacnes [dev_id, prr_id] ....
+[0, 2]
+========================
+Sobel Service==============
+ID: 1
+4 Bin Files [dev_name, part_id, filename]....
+[acla10_vfpga0, 0, ../bin/pr_bin/Sobel/fpga.bin]
+[acla10_vfpga0, 1, ../bin/pr_bin/Sobel/fpga_1.bin]
+[acla10_vfpga0, 2, ../bin/pr_bin/Sobel/fpga_2.bin]
+[acla10_vfpga0, 3, ../bin/pr_bin/Sobel/fpga_3.bin]
+1 Allocated instacnes [dev_id, prr_id] ....
+[0, 1]
+========================
+MatMul Service==============
+ID: 0
+4 Bin Files [dev_name, part_id, filename]....
+[acla10_vfpga0, 0, ../bin/pr_bin/MatMul/fpga.bin]
+[acla10_vfpga0, 1, ../bin/pr_bin/MatMul/fpga_1.bin]
+[acla10_vfpga0, 2, ../bin/pr_bin/MatMul/fpga_2.bin]
+[acla10_vfpga0, 3, ../bin/pr_bin/MatMul/fpga_3.bin]
+1 Allocated instacnes [dev_id, prr_id] ....
+[0, 0]
+========================
+time_in_task 0
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : -nan 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : -nan 
+Scaler>> Decrease PRR instance of service#1 from 0 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : -nan 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = -nan 
+n_ = 1 
+1 Service --------------------
+avg_work_load = -nan 
+n_ = 1 
+2 Service --------------------
+avg_work_load = -nan 
+n_ = 1 
+TaskQueueManager>> push the request of service#0 to PRR#0
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+TaskQueueManager>> push the request of service#0 to Device#0
+PRQueueManager>> Reprogram the PRR#0 with ../bin/pr_bin/MatMul/fpga.bin
+:: [acla10_vfpga0] Starting to program device...
+:: [acla10_vfpga0] Programming kernel region using PR with rbf file size 19725892
+:: [acla10_vfpga0] Reading PR base ID from fabric ...
+:: [acla10_vfpga0] PR base and import compile IDs match
+:: [acla10_vfpga0] PR base ID currently configured is 0x6a610aa7
+:: [acla10_vfpga0] PR import compile ID is 0x6a610aa7
+:: [acla10_vfpga0] Doing PCIe-to-fabric read test ...
+:: [acla10_vfpga0] PCIe-to-fabric read test passed
+:: [acla10_vfpga0] Starting PR programming of the device...
+:: [acla10_vfpga0] Finished PR programming of the device.
+:: [acla10_vfpga0] Doing PCIe-to-fabric read test ...
+:: [acla10_vfpga0] PCIe-to-fabric read test passed
+:: [acla10_vfpga0] Uniphys are calibrated
+:: [acla10_vfpga0] PR programming passed.
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7bc830) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7c0840) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7c4850) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7c8860) and/or dev offset (0x4b0) is not aligned to 64 bytes
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7c8860) and/or dev offset (0x44b0) is not aligned to 64 bytes
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7c4850) and/or dev offset (0x84b0) is not aligned to 64 bytes
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+TaskQueueManager>> push the request of service#2 to PRR#2
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+TaskQueueManager>> push the request of service#2 to Device#0
+PRQueueManager>> Reprogram the PRR#2 with ../bin/pr_bin/VecAdd/fpga_2.bin
+:: [acla10_vfpga0] Starting to program device...
+:: [acla10_vfpga0] Programming kernel region using PR with rbf file size 30003460
+:: [acla10_vfpga0] Reading PR base ID from fabric ...
+:: [acla10_vfpga0] PR base and import compile IDs match
+:: [acla10_vfpga0] PR base ID currently configured is 0x6a610aa7
+:: [acla10_vfpga0] PR import compile ID is 0x6a610aa7
+:: [acla10_vfpga0] Doing PCIe-to-fabric read test ...
+:: [acla10_vfpga0] PCIe-to-fabric read test passed
+:: [acla10_vfpga0] Starting PR programming of the device...
+:: [acla10_vfpga0] Finished PR programming of the device.
+:: [acla10_vfpga0] Doing PCIe-to-fabric read test ...
+:: [acla10_vfpga0] PCIe-to-fabric read test passed
+:: [acla10_vfpga0] Uniphys are calibrated
+:: [acla10_vfpga0] PR programming passed.
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+TaskQueueManager>> push the request of service#1 to PRR#1
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+TaskQueueManager>> push the request of service#1 to Device#0
+PRQueueManager>> Reprogram the PRR#1 with ../bin/pr_bin/Sobel/fpga_1.bin
+:: [acla10_vfpga0] Starting to program device...
+:: [acla10_vfpga0] Programming kernel region using PR with rbf file size 29027716
+:: [acla10_vfpga0] Reading PR base ID from fabric ...
+:: [acla10_vfpga0] PR base and import compile IDs match
+:: [acla10_vfpga0] PR base ID currently configured is 0x6a610aa7
+:: [acla10_vfpga0] PR import compile ID is 0x6a610aa7
+:: [acla10_vfpga0] Doing PCIe-to-fabric read test ...
+:: [acla10_vfpga0] PCIe-to-fabric read test passed
+:: [acla10_vfpga0] Starting PR programming of the device...
+:: [acla10_vfpga0] Finished PR programming of the device.
+:: [acla10_vfpga0] Doing PCIe-to-fabric read test ...
+:: [acla10_vfpga0] PCIe-to-fabric read test passed
+:: [acla10_vfpga0] Uniphys are calibrated
+:: [acla10_vfpga0] PR programming passed.
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7bc830) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x900840) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+TaskQueueManager>> push the request of service#1 to PRR#1
+PRQueueManager>> launch the request
+TaskQueueManager>> push the request of service#2 to PRR#2
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+time_in_task 5
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#1 from 0 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+2 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+time_in_task 5
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#1 from 0 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+2 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+time_in_task 5
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#1 from 0 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+2 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+copy from host input A result : 0
+TaskQueueManager>> push the request of service#1 to PRR#1
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+TaskQueueManager>> push the request of service#1 to PRR#1
+Run kernel result: 0
+TaskQueueManager>> push the request of service#1 to PRR#1
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+TaskQueueManager>> push the request of service#2 to PRR#2
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+TaskQueueManager>> push the request of service#1 to PRR#1
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 0.000000VecAddoutput[2] : 0.000000VecAddoutput[3] : 0.000000VecAddoutput[4] : 0.000000VecAddoutput[5] : 0.000000VecAddoutput[6] : 0.000000VecAddoutput[7] : 0.000000VecAddoutput[8] : 0.000000VecAddoutput[9] : 0.000000
+MMDApp>> request releaseDevice
+time_in_task 10
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 1.411117 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 1.411117 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+TaskQueueManager>> push the request of service#2 to PRR#2
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 0.000000VecAddoutput[2] : 0.000000VecAddoutput[3] : 0.000000VecAddoutput[4] : 0.000000VecAddoutput[5] : 0.000000VecAddoutput[6] : 0.000000VecAddoutput[7] : 0.000000VecAddoutput[8] : 0.000000VecAddoutput[9] : 0.000000
+MMDApp>> request releaseDevice
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 15
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 4.409740 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 4.409740 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+TaskQueueManager>> push the request of service#0 to PRR#0
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#2 to PRR#2
+PRQueueManager>> launch the request
+TaskQueueManager>> push the request of service#2 to PRR#2
+time_in_task 20
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 6.879195 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 6.879195 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 25
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 0.000000 
+Scaler>> Decrease PRR instance of service#0 from 0 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 9.348649 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000084 
+Scaler>> Decrease PRR instance of service#2 from 0 
+0 Service --------------------
+avg_work_load = 0.000000 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 9.348649 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000084 
+n_ = 1 
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+time_in_task 30
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 1.365094 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 10.936155 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000251 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 1.365094 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 10.936155 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000251 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#0 to PRR#0
+time_in_task 35
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 1.820125 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 13.581999 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000502 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 1.820125 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 13.581999 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000502 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#2 to PRR#2
+time_in_task 40
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 2.843945 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 15.698674 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000669 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 2.843945 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 15.698674 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000669 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 45
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 3.412734 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 18.520908 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000836 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 3.412734 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 18.520908 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000836 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#2 to PRR#2
+time_in_task 50
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 3.412734 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 22.401479 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.000961 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 3.412734 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 22.401480 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.000961 
+n_ = 1 
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 55
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 3.412734 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 24.694544 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.001463 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 3.412734 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 24.694544 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.001463 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 60
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 3.412734 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 28.045946 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.001714 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 3.412734 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 28.045946 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.001714 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+time_in_task 65
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 4.209039 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 30.339013 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.001923 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 4.209039 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 30.339014 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.001923 
+n_ = 1 
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#2 to PRR#2
+time_in_task 70
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 4.777828 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 30.868181 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.002633 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 4.777828 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 30.868181 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.002633 
+n_ = 1 
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 75
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 5.687890 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 32.279296 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.003010 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 5.687890 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 32.279297 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.003010 
+n_ = 1 
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 80
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 5.687890 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 35.277921 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.003344 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 5.687890 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 35.277920 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.003344 
+n_ = 1 
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#0 to PRR#0
+TaskQueueManager>> push the request of service#2 to PRR#2
+time_in_task 85
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 5.915406 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 38.276545 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.003595 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 5.915406 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 38.276546 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.003595 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 90
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 6.256679 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 41.451557 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.003762 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 6.256679 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 41.451557 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.003762 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 95
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 6.256679 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 45.861297 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.003762 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 6.256679 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 45.861298 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.003762 
+n_ = 1 
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#1 to PRR#1
+TaskQueueManager>> push the request of service#1 to PRR#1
+time_in_task 100
+ResourceScaler>> periodic scaling
+ N_allocated_PRRs of service#0: 1
+work_load[0 PRR] : 6.256679 
+Scaler>> Increase PRR instance of service#0 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#1: 1
+work_load[0 PRR] : 49.741870 
+Scaler>> Increase PRR instance of service#1 from 0
+Scaler>> to 2 
+ N_allocated_PRRs of service#2: 1
+work_load[0 PRR] : 0.003887 
+Scaler>> Decrease PRR instance of service#2 from 0 
+Contention is occured
+---contention n_[0] : 1
+---contention n_[1] : 2
+---contention n_[2] : 1
+0 Service --------------------
+avg_work_load = 6.256679 
+n_ = 1 
+1 Service --------------------
+avg_work_load = 49.741871 
+n_ = 2 
+2 Service --------------------
+avg_work_load = 0.003887 
+n_ = 1 
+TaskQueueManager>> push the request of service#2 to PRR#2
+TaskQueueManager>> push the request of service#2 to PRR#2
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+TaskQueueManager>> push the request of service#2 to PRR#2
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa80088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+Copy from Device result: 0
+MatMuloutput[0] : 94416.000000MatMuloutput[1] : 96432.000000MatMuloutput[2] : 98448.000000MatMuloutput[3] : 100464.000000MatMuloutput[4] : 97180.000000MatMuloutput[5] : 99196.000000MatMuloutput[6] : 101212.000000MatMuloutput[7] : 103228.000000MatMuloutput[8] : 96844.000000MatMuloutput[9] : 98860.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 0.000000VecAddoutput[2] : 0.000000VecAddoutput[3] : 0.000000VecAddoutput[4] : 0.000000VecAddoutput[5] : 0.000000VecAddoutput[6] : 0.000000VecAddoutput[7] : 0.000000VecAddoutput[8] : 0.000000VecAddoutput[9] : 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa80088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+PRQueueManager>> launch the request
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+a[0] : 0.000000  a[1] : 0.000000  a[2] : 0.000000  a[3] : 0.000000  a[4] : 0.000000  a[5] : 0.000000  a[6] : 0.000000  a[7] : 0.000000  a[8] : 0.000000  a[9] : 0.000000  ...
+a[4086] : 0.000000   a[4087] : 0.000000   a[4088] : 0.000000   a[4089] : 0.000000   a[4090] : 0.000000   a[4091] : 0.000000   a[4092] : 0.000000   a[4093] : 0.000000   a[4094] : 0.000000   a[4095] : 0.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+b[0] : 0.000000  b[1] : 0.000000  b[2] : 0.000000  b[3] : 0.000000  b[4] : 0.000000  b[5] : 0.000000  b[6] : 0.000000  b[7] : 0.000000  b[8] : 0.000000  b[9] : 0.000000  ...
+b[4086] : 0.000000  b[4087] : 0.000000  b[4088] : 0.000000  b[4089] : 0.000000  b[4090] : 0.000000  b[4091] : 0.000000  b[4092] : 0.000000  b[4093] : 0.000000  b[4094] : 0.000000  b[4095] : 0.000000  ...
+Set args result : 0
+copy from host input A result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 0.000000VecAddoutput[2] : 0.000000VecAddoutput[3] : 0.000000VecAddoutput[4] : 0.000000VecAddoutput[5] : 0.000000VecAddoutput[6] : 0.000000VecAddoutput[7] : 0.000000VecAddoutput[8] : 0.000000VecAddoutput[9] : 0.000000
+MMDApp>> request releaseDevice
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac1448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from host input A result : 0
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host input B result : 0
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host output result : 0
+a[0] : 0.000000  a[1] : 0.000000  a[2] : 0.000000  a[3] : 0.000000  a[4] : 0.000000  a[5] : 0.000000  a[6] : 0.000000  a[7] : 0.000000  a[8] : 0.000000  a[9] : 0.000000  ...
+a[4086] : 0.000000   a[4087] : 0.000000   a[4088] : 0.000000   a[4089] : 0.000000   a[4090] : 0.000000   a[4091] : 0.000000   a[4092] : 0.000000   a[4093] : 0.000000   a[4094] : 0.000000   a[4095] : 0.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+Set args result : 0
+Run kernel result: 0
+b[0] : 0.000000  b[1] : 0.000000  b[2] : 0.000000  b[3] : 0.000000  b[4] : 0.000000  b[5] : 0.000000  b[6] : 0.000000  b[7] : 0.000000  b[8] : 0.000000  b[9] : 0.000000  ...
+b[4086] : 0.000000  b[4087] : 0.000000  b[4088] : 0.000000  b[4089] : 0.000000  b[4090] : 0.000000  b[4091] : 0.000000  b[4092] : 0.000000  b[4093] : 0.000000  b[4094] : 0.000000  b[4095] : 0.000000  ...
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 0.000000VecAddoutput[2] : 0.000000VecAddoutput[3] : 0.000000VecAddoutput[4] : 0.000000VecAddoutput[5] : 0.000000VecAddoutput[6] : 0.000000VecAddoutput[7] : 0.000000VecAddoutput[8] : 0.000000VecAddoutput[9] : 0.000000
+MMDApp>> request releaseDevice
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+PRQueueManager>> launch the request
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host input A result : 0
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input B result : 0
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+Set args result : 0
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  Run kernel result: 0
+b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa80088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa80088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+PRQueueManager>> launch the request
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8000ad0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8004ae0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8008af0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800cb00) and/or dev offset (0x4b0) is not aligned to 64 bytes
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800cb00) and/or dev offset (0x44b0) is not aligned to 64 bytes
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa8008af0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+Copy from Device result: 0
+MatMuloutput[0] : 192.000000MatMuloutput[1] : 194.000000MatMuloutput[2] : 196.000000MatMuloutput[3] : 198.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 2.000000MatMuloutput[6] : 4.000000MatMuloutput[7] : 6.000000MatMuloutput[8] : 8.000000MatMuloutput[9] : 10.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac1448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8000ad0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8004ae0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8008af0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800cb00) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800cb00) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa8008af0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aac00c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+copy from host input A result : 0
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aac00c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from host input B result : 0
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+copy from host output result : 0
+Set args result : 0
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aac0088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+Run kernel result: 0
+Copy from Device result: 0
+MatMuloutput[0] : 192.000000MatMuloutput[1] : 194.000000MatMuloutput[2] : 196.000000MatMuloutput[3] : 198.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 2.000000MatMuloutput[6] : 4.000000MatMuloutput[7] : 6.000000MatMuloutput[8] : 8.000000MatMuloutput[9] : 10.000000
+MMDApp>> request releaseDevice
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a6800c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a6800c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a680088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+PRQueueManager>> launch the request
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+PRQueueManager>> launch the request
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8000ad0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8004ae0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa8008af0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800cb00) and/or dev offset (0x4b0) is not aligned to 64 bytes
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa800cb00) and/or dev offset (0x44b0) is not aligned to 64 bytes
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aa8008af0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+PRQueueManager>> launch the request
+Copy from Device result: 0
+MatMuloutput[0] : 0.000000MatMuloutput[1] : 0.000000MatMuloutput[2] : 0.000000MatMuloutput[3] : 0.000000MatMuloutput[4] : 0.000000MatMuloutput[5] : 0.000000MatMuloutput[6] : 0.000000MatMuloutput[7] : 0.000000MatMuloutput[8] : 0.000000MatMuloutput[9] : 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aac0088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aac00c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aac00c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+b[0] : 0.000000  b[1] : 1.000000  b[2] : 2.000000  b[3] : 3.000000  b[4] : 4.000000  b[5] : 5.000000  b[6] : 6.000000  b[7] : 7.000000  b[8] : 8.000000  b[9] : 9.000000  ...
+b[4086] : 86.000000  b[4087] : 87.000000  b[4088] : 88.000000  b[4089] : 89.000000  b[4090] : 90.000000  b[4091] : 91.000000  b[4092] : 92.000000  b[4093] : 93.000000  b[4094] : 94.000000  b[4095] : 95.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1aac0088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host input A result : 0
+Copy from Device result: 0
+MatMuloutput[0] : 94416.000000MatMuloutput[1] : 96432.000000MatMuloutput[2] : 98448.000000MatMuloutput[3] : 100464.000000MatMuloutput[4] : 97180.000000MatMuloutput[5] : 99196.000000MatMuloutput[6] : 101212.000000MatMuloutput[7] : 103228.000000MatMuloutput[8] : 96844.000000MatMuloutput[9] : 98860.000000
+MMDApp>> request releaseDevice
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#0 with service#0
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700048d0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+copy from hos input B result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+copy from host output result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x4b0) is not aligned to 64 bytes
+Set args result : 0
+a[0] : 0.000000  a[1] : 1.000000  a[2] : 2.000000  a[3] : 3.000000  a[4] : 4.000000  a[5] : 5.000000  a[6] : 6.000000  a[7] : 7.000000  Run kernel result: 0
+a[8] : 8.000000  a[9] : 9.000000  ...
+a[4086] : 86.000000   a[4087] : 87.000000   a[4088] : 88.000000   a[4089] : 89.000000   a[4090] : 90.000000   a[4091] : 91.000000   a[4092] : 92.000000   a[4093] : 93.000000   a[4094] : 94.000000   a[4095] : 95.000000   ...
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a7000c8f0) and/or dev offset (0x44b0) is not aligned to 64 bytes
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+b[0] : 192.000000  b[1] : 194.000000  b[2] : 196.000000  b[3] : 198.000000  b[4] : 0.000000  b[5] : 2.000000  b[6] : 4.000000  b[7] : 6.000000  b[8] : 8.000000  b[9] : 10.000000  ...
+b[4086] : 172.000000  b[4087] : 174.000000  b[4088] : 176.000000  b[4089] : 178.000000  b[4090] : 180.000000  b[4091] : 182.000000  b[4092] : 184.000000  b[4093] : 186.000000  b[4094] : 188.000000  b[4095] : 190.000000  ...
+Set args result : 0
+Run kernel result: 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 16384 bytes from device to host because of lack of alignment
+**                 host ptr (0x7f1a700088e0) and/or dev offset (0x84b0) is not aligned to 64 bytes
+Copy from Device result: 0
+MatMuloutput[0] : 188804.000000MatMuloutput[1] : 192836.000000MatMuloutput[2] : 196868.000000MatMuloutput[3] : 200900.000000MatMuloutput[4] : 194332.000000MatMuloutput[5] : 198364.000000MatMuloutput[6] : 202396.000000MatMuloutput[7] : 206428.000000MatMuloutput[8] : 193672.000000MatMuloutput[9] : 197704.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 0.000000VecAddoutput[2] : 0.000000VecAddoutput[3] : 0.000000VecAddoutput[4] : 0.000000VecAddoutput[5] : 0.000000VecAddoutput[6] : 0.000000VecAddoutput[7] : 0.000000VecAddoutput[8] : 0.000000VecAddoutput[9] : 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#2 with service#2
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+copy from host input A result : 0
+copy from host input B result : 0
+copy from host output result : 0
+Set args result : 0
+Run kernel result: 0
+Copy from Device result: 0
+VecAddoutput[0] : 0.000000VecAddoutput[1] : 2.000000VecAddoutput[2] : 4.000000VecAddoutput[3] : 6.000000VecAddoutput[4] : 8.000000VecAddoutput[5] : 10.000000VecAddoutput[6] : 12.000000VecAddoutput[7] : 14.000000VecAddoutput[8] : 16.000000VecAddoutput[9] : 18.000000
+MMDApp>> request releaseDevice
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a680008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a681448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa40008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa41448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a700008c0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1a701448d0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
+copy from host result : 0
+write kernel arg result : 0
+run kernel result : 0
+copy from device result : 0
+Sobeloutput[0]: 0.000000Sobeloutput[1]: 0.000000Sobeloutput[2]: 0.000000Sobeloutput[3]: 0.000000Sobeloutput[4]: 0.000000Sobeloutput[5]: 0.000000Sobeloutput[6]: 0.000000Sobeloutput[7]: 0.000000Sobeloutput[8]: 0.000000Sobeloutput[9]: 0.000000
+MMDApp>> request releaseDevice
+PRQueueManager>> launch the request
+MMDApp>> request getProgram
+MMDApp>> Reprogram the PRR#1 with service#1
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4000ad0) and/or dev offset (0xc4b0) is not aligned to 64 bytes
+copy from host result : 0
+** WARNING: [acla10_vfpga0] NOT using DMA to transfer 1327104 bytes from host to device because of lack of alignment
+**                 host ptr (0x7f1aa4144ae0) and/or dev offset (0x5d4b0) is not aligned to 64 bytes
